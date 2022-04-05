@@ -1,4 +1,4 @@
-{% set version = '0.0.7' %}
+{% set version = "0.0.8" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,10 +11,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RcppSpdlog_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RcppSpdlog/RcppSpdlog_{{ version }}.tar.gz
-  sha256: db3e22a5e76e1b045196ed9793187a120fcd985e5eccfd6a7c1756646a43968d
+  sha256: ea8f7f6247ed03a544225fb35c9e7949eb27fd012adbee2c81975e9d6278aefc
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -49,11 +49,9 @@ test:
 about:
   home: https://github.com/eddelbuettel/rcppspdlog, https://dirk.eddelbuettel.com/code/rcpp.spdlog.html
   license: GPL-2.0-or-later
-  summary: The mature and widely-used C++ logging library 'spdlog' by Gabi Melman provides many
-    desirable features. This package bundles these header files for easy use by R packages
-    via a simple 'LinkingTo:' inclusion.
+  summary: The mature and widely-used C++ logging library 'spdlog' by Gabi Melman provides many desirable features. This package bundles these header files for easy use by R packages via a simple 'LinkingTo:' inclusion.
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
