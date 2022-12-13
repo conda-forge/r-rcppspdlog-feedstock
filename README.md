@@ -1,13 +1,15 @@
 About r-rcppspdlog
 ==================
 
-Home: https://github.com/eddelbuettel/rcppspdlog, https://dirk.eddelbuettel.com/code/rcpp.spdlog.html
+Home: https://dirk.eddelbuettel.com/code/rcpp.spdlog.html
 
 Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rcppspdlog-feedstock/blob/main/LICENSE.txt)
 
 Summary: The mature and widely-used C++ logging library 'spdlog' by Gabi Melman provides many desirable features. This package bundles these header files for easy use by R packages via a simple 'LinkingTo:' inclusion.
+
+Development: https://github.com/eddelbuettel/rcppspdlog
 
 Current build status
 ====================
