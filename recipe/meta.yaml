@@ -1,4 +1,4 @@
-{% set version = "0.0.10" %}
+{% set version = "0.0.11" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RcppSpdlog_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RcppSpdlog/RcppSpdlog_{{ version }}.tar.gz
-  sha256: 0ecaf0df120af510db2dc75aaaa40ae6bc1baf7f488fc8763137ff2a9f0b23a5
+  sha256: 71b1509521ae2dc4a94aefdebe3c2a49a0b037c591b5ec8cf1e1b30191e41b88
 
 build:
   merge_build_host: true  # [win]
@@ -22,12 +22,12 @@ build:
 
 requirements:
   build:
-    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
-    - r-rcpp                     # [build_platform != target_platform]
-    - {{ compiler('c') }}              # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
-    - {{ compiler('cxx') }}            # [not win]
-    - {{ compiler('m2w64_cxx') }}      # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - r-rcpp                       # [build_platform != target_platform]
+    - {{ compiler('c') }}          # [not win]
+    - {{ compiler('m2w64_c') }}    # [win]
+    - {{ compiler('cxx') }}        # [not win]
+    - {{ compiler('m2w64_cxx') }}  # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -49,40 +49,15 @@ test:
     - "\"%R%\" -e \"library('RcppSpdlog')\""  # [win]
 
 about:
-  home: https://github.com/eddelbuettel/rcppspdlog, https://dirk.eddelbuettel.com/code/rcpp.spdlog.html
+  home: https://dirk.eddelbuettel.com/code/rcpp.spdlog.html
+  dev_url: https://github.com/eddelbuettel/rcppspdlog
   license: GPL-2.0-or-later
   summary: The mature and widely-used C++ logging library 'spdlog' by Gabi Melman provides many desirable features. This package bundles these header files for easy use by R packages via a simple 'LinkingTo:' inclusion.
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
     - conda-forge/r
     - raivivek
-
-# The original CRAN metadata for this package was:
-
-# Package: RcppSpdlog
-# Type: Package
-# Title: 'spdlog' C++ Header Library for Logging
-# Version: 0.0.7
-# Date: 2021-12-05
-# License: GPL (>= 2)
-# Author: Dirk Eddelbuettel
-# Maintainer: Dirk Eddelbuettel <edd@debian.org>
-# Description: The mature and widely-used C++ logging library 'spdlog' by Gabi Melman provides many desirable features. This package bundles these header files for easy use by R packages via a simple 'LinkingTo:' inclusion.
-# URL: https://github.com/eddelbuettel/rcppspdlog, https://dirk.eddelbuettel.com/code/rcpp.spdlog.html
-# BugReports: https://github.com/eddelbuettel/rcppspdlog/issues
-# LinkingTo: Rcpp
-# Imports: Rcpp
-# Suggests: simplermarkdown
-# VignetteBuilder: simplermarkdown
-# RoxygenNote: 6.0.1
-# NeedsCompilation: yes
-# Packaged: 2021-12-05 15:16:24 UTC; edd
-# Repository: CRAN
-# Date/Publication: 2021-12-05 15:40:02 UTC
-
-# See
-# https://docs.conda.io/projects/conda-build for
-# more information about meta.yaml
