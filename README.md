@@ -1,11 +1,24 @@
+About r-rcppspdlog-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rcppspdlog-feedstock/blob/main/LICENSE.txt)
+
 About r-rcppspdlog
-==================
+------------------
 
 Home: https://dirk.eddelbuettel.com/code/rcpp.spdlog.html
 
 Package license: GPL-2.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rcppspdlog-feedstock/blob/main/LICENSE.txt)
+Summary: The mature and widely-used C++ logging library 'spdlog' by Gabi Melman provides many desirable features. This package bundles these header files for easy use by R packages via a simple 'LinkingTo:' inclusion.
+
+Development: https://github.com/eddelbuettel/rcppspdlog
+About r-rcppspdlog
+------------------
+
+Home: https://dirk.eddelbuettel.com/code/rcpp.spdlog.html
+
+Package license: GPL-2.0-or-later
 
 Summary: The mature and widely-used C++ logging library 'spdlog' by Gabi Melman provides many desirable features. This package bundles these header files for easy use by R packages via a simple 'LinkingTo:' inclusion.
 
@@ -15,14 +28,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://app.travis-ci.com/conda-forge/r-rcppspdlog-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/r-rcppspdlog-feedstock/main.svg?label=Linux">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>
@@ -36,13 +42,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_r_base4.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14884&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcppspdlog-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_r_base4.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_64_r_base4.2</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14884&branchName=main">
@@ -50,10 +49,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_r_base4.1</td>
+              <td>linux_64_r_base4.3</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14884&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcppspdlog-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_r_base4.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcppspdlog-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_r_base4.3" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -64,10 +63,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_r_base4.1</td>
+              <td>linux_aarch64_r_base4.3</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14884&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcppspdlog-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_r_base4.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcppspdlog-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_r_base4.3" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -78,10 +77,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_r_base4.1</td>
+              <td>linux_ppc64le_r_base4.3</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14884&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcppspdlog-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcppspdlog-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_r_base4.3" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -92,10 +91,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_r_base4.1</td>
+              <td>osx_64_r_base4.3</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14884&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcppspdlog-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_r_base4.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcppspdlog-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.3" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -103,6 +102,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14884&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcppspdlog-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_r_base4.2" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_r_base4.3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14884&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rcppspdlog-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_r_base4.3" alt="variant">
                 </a>
               </td>
             </tr><tr>
