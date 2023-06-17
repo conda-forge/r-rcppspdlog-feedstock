@@ -1,4 +1,4 @@
-{% set version = "0.0.12" %}
+{% set version = "0.0.13" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,11 +11,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RcppSpdlog_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RcppSpdlog/RcppSpdlog_{{ version }}.tar.gz
-  sha256: 9db914047a5b7b5c863c059a2db83ad051168093a14e4d0315b4f5442a0456d9
+  sha256: 73dc2c33ec7a9d5b8ffa7270cc2f32a9c75cd98ce990126e86018c43009c8984
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
