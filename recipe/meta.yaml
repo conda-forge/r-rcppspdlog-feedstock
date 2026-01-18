@@ -1,4 +1,4 @@
-{% set version = "0.0.24" %}
+{% set version = "0.0.26" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RcppSpdlog_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RcppSpdlog/RcppSpdlog_{{ version }}.tar.gz
-  sha256: 0bab73417de8df58256a0de174e4ef695b5cc6099278d0b74d62d56a5e9351f6
+  sha256: 2682d8cc256b13eab5af884cc18b69635a964abb8b389584b2701f3ee21576ab
 
 build:
   number: 0
